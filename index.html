@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Faixa Ouro - Placa Ouro - Sistema auxiliar de identificação veicular</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +27,9 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container bg-header">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -39,19 +38,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Faixa Ouro</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="/about">Sobre</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                        <a href="/contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -64,76 +60,193 @@
     <!-- Note: The background image is set within the business-casual.css file. -->
     <header class="business-header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="tagline">Business Name or Tagline</h1>
-                </div>
+            <img class="business-align ouro-logo"
+              src="https://s3.amazonaws.com/faixaourokit/imgs/Logo_faixa_ouro_vazio.png">
+        <a name="form"></a>
+            <h1 class="business-align tagline">Agora é lei! Compre seu kit e evite multas.</h1>
+        </div>
+        <div class="central-header">
+            <div class="header-impact">
+              <center><span class="font-impact">Melhor preço do
+                Brasil</span></center>
             </div>
+            <img class="sample-img"
+              src="https://s3.amazonaws.com/faixaourokit/imgs/faixa_ouro_samples.png">
+        </div>
+        <div class="lead-form">
+          <form method="post">
+            <div class="form-col col-mg-right">
+              <div class="form-group form-group-sm">
+               <input class="form-control" id="name" name="name" placeholder="Nome" type="text"/>
+              </div>
+              <div class="form-group form-group-sm">
+               <input class="form-control" id="email" name="email" placeholder="Email" type="text"/>
+              </div>
+              <div class="form-group form-group-sm">
+               <input class="form-control" id="tel" name="tel" placeholder="Telefone" type="text"/>
+              </div>
+              <div class="form-group form-group-sm">
+               <input class="form-control" id="text" name="text" placeholder="Endere&ccedil;o para envio" type="text"/>
+              </div>
+              <div class="form-group form-group-sm">
+               <input class="form-control" id="number" name="number" placeholder="Quantidade de kits" type="text"/>
+              </div>
+              <div class="form-group form-group-sm">
+               <div class=" ">
+                <div class="checkbox">
+                 <label class="checkbox">
+                  <input name="checkbox" type="checkbox" value="Preciso de base
+                  de alummínio"/>
+                  Preciso de base de alumínio
+                 </label>
+                </div>
+               </div>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group form-group-sm">
+               <label for="message">
+                Informações do kit:
+               </label>
+               <textarea class="form-control" cols="40" id="message"
+                 name="message" placeholder="ABC-1234 SP-ITUPEVA; BCA-4321 SP-ITU" 
+                 rows="6"></textarea>
+               <span class="help-block" id="hint_message">
+                Insira a placa e a cidade. Caso queira mais de um kit, separe por ';'.
+               </span>
+              </div>
+              <div class="form-group">
+               <div>
+                <button class="btn btn-custom btn-lg" name="submit" type="submit">
+                  Pedir orçamento
+                </button>
+               </div>
+              </div>
+            </div>
+          </form>
         </div>
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-align container">
 
         <hr>
 
         <div class="row">
             <div class="col-sm-8">
-                <h2>What We Do</h2>
-                <p>Introduce the visitor to the business using clear, informative text. Use well-targeted keywords within your sentences to make sure search engines can find the business.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae similique eligendi reiciendis sunt distinctio odit? Quia, neque, ipsa, adipisci quisquam ullam deserunt accusantium illo iste exercitationem nemo voluptates asperiores.</p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
-                </p>
+                <h2>O que é?</h2>
+                <p> É um sistema auxiliar de identificação veicular. O CONSELHO NACIONAL
+                DE TRÂNSITO - CONTRAN promulgou uma
+                <a href="https://s3.amazonaws.com/faixaourokit/docs/Resolucao575_2015.pdf"
+                  target="_blank">
+                nova resolução (nº575)</a> tornando obrigatório a utilização da
+                <b>Faixa Ouro</b> em todo veículo de carga. Para se adequar à lei a 
+                <b>Faixa Ouro</b> utilizada deve ser de material refletivo aprovado pelo 
+                DENATRAN.</p>
+                <p>A Replac é fornecedora exclusiva da Sherman, a <b>única empresa
+                brasileira homologada</b> na produção de películas refletivas.</p>
+                <p>Preencha o formulário e receba um orçamento</p>
             </div>
             <div class="col-sm-4">
-                <h2>Contact Us</h2>
+                <h2>Contato</h2>
                 <address>
-                    <strong>Start Bootstrap</strong>
-                    <br>3481 Melrose Place
-                    <br>Beverly Hills, CA 90210
+                    <strong>Gabriel Raposo</strong>
+                    <br>Representante Replac
                     <br>
                 </address>
                 <address>
-                    <abbr title="Phone">P:</abbr>(123) 456-7890
+                    Cel: (11) 98867-3304 <img class="w-icon"
+                      src="https://s3.amazonaws.com/faixaourokit/imgs/icone-whats.png">
                     <br>
-                    <abbr title="Email">E:</abbr> <a href="mailto:#">name@example.com</a>
+                    Email: <a href="mailto:gabriel@faixaourokit.com.br">
+                      gabriel@faixaourokit.com.br</a>
                 </address>
             </div>
         </div>
         <!-- /.row -->
+        <div class="row">
+          <p>
+            <center>
+              <a class="btn btn-custom btn-lg" href="#form">Pedir orçamento</a>
+            </center>
+          </p>
+        </div>
 
         <hr>
 
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #1</h2>
-                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+                <img class="img-max-size img-circle img-responsive img-center"
+                  src="https://s3.amazonaws.com/faixaourokit/imgs/foco_rolo.png" alt="">
+                <h2>Não seja enganado!</h2>
+                <p>Existem muitos produtos similares no mercado, porém, conforme
+                anexo da 
+                <a href="https://s3.amazonaws.com/faixaourokit/docs/Resolucao370_2011.pdf"
+                  target="_blank">
+                resolução nº370</a>, <i>"A película refletiva deverá ser homologada pelo 
+                DENATRAN e ter suas características atestadas por entidade reconhecida 
+                pelo DENATRAN, bem como deverá exibir em sua construção marcas de 
+                segurança do fabricante e comprobatória desse laudo com a gravação das letras
+                'APROVADO DENATRAN'."</i></p>
+                <p>A Replac é fornecedora exclusiva da Sherman, a única empresa
+                brasileira homologada no DENATRAN, 
+                <a href="https://s3.amazonaws.com/faixaourokit/docs/Portaria_42_aprovacao.pdf"
+                  target="_blank">
+                conforme portaria nº42</a>.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #2</h2>
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                <img class="img-max-size img-circle img-responsive img-center"
+                  src="https://s3.amazonaws.com/faixaourokit/imgs/Multa.png" alt="">
+                <h2>Evite multas!</h2>
+                <p>Conforme previsto no artigo 3º da resolução nº370, <i>"O descumprimento
+                dos preceitos desta Resolução, bem como o trânsito dos veículos com o
+                sistema de identificação auxiliar sem condições de legibilidade e visibilidade
+                constitui infração prevista no artigo 237 do Código de Trânsito Brasileiro,
+                sujeitando seus proprietários à penalidade de multa, bem como à medida
+                administrativa de retenção do veículo para regularização."</i></p>
+                <p>Receba o kit na sua casa e evite problemas.
+                <a href='/about'/>Saiba mais</a>.<p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #3</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                <img class="img-max-size img-circle img-responsive img-center"
+                  src="https://s3.amazonaws.com/faixaourokit/imgs/placa_aluminio_faixa_ouro.jpg" alt="">
+                <h2>Instale você mesmo!</h2>
+                <p>O kit é composto por duas faixas, uma com a placa do veículo e
+                outra com o nome da cidade, que deverão ser instaladaos na parte
+                traseira da carroceria.</p>
+                <p>Nos veículos com carroceria de madeira ou metálicos com superfície
+                irregular que não garanta uma perfeita aderência os dispositivos de
+                identificação deverão ser fixados primeiramente em uma base metálica
+                lisa, com dimensões adequadas para recepcionar a película refletiva,
+                para então serem afixados à carroceria. O par de placas de alumínio
+                custa R$8,00. <a href='/about'/>Saiba mais</a>.</p>
             </div>
         </div>
         <!-- /.row -->
+        <div class="row">
+          <p>
+            <center>
+              <a class="btn btn-custom btn-lg" href="#form">Pedir orçamento</a>
+            </center>
+          </p>
+        </div>
 
         <hr>
 
         <!-- Footer -->
         <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
+            <div class="logo-footer-container">
+              <a href="http://www.replacinova.com.br">
+                <img class="logo-footer"
+                src="https://s3.amazonaws.com/faixaourokit/imgs/Logo_replac.jpg">
+              </a>
             </div>
-            <!-- /.row -->
+            <div class="logo-footer-container">
+              <a href="http://www.sherman.com.br">
+                <img class="logo-footer"
+                src="https://s3.amazonaws.com/faixaourokit/imgs/logo_sherman.png">
+              </a>
+            </div>
         </footer>
 
     </div>
