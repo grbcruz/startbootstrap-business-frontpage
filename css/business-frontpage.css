@@ -8,6 +8,11 @@ body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.nav-logo {
+    width: 135px;
+    margin-top: 6px;
+}
+
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 .bg-header {
   background: url('https://s3.amazonaws.com/faixaourokit/imgs/bg_fx_ouro.jpg') center center scroll;
@@ -66,10 +71,18 @@ body {
   margin-top: 20px;
 }
 
+.about-sample-img {
+  width: 100%;
+}
+
 /* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
     color: #fff;
+}
+
+.about-tagline {
+    color: #D2B526;
 }
 
 .img-center {
@@ -97,10 +110,27 @@ body {
     margin-right: 30px;
 }
 
+.about-lead-form {
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    color: #464646;
+    border-color: #E7C51F;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 8.33333333%;
+}
+
 .help-block {
   font-weight: 200;
   font-size: 12px;
   color: #f0f0f0;
+}
+
+.about-help-block {
+  font-weight: 200;
+  font-size: 12px;
+  color: #c0c0c0;
 }
 
 .form-control:focus { 
@@ -136,6 +166,33 @@ footer {
   height: auto;
 }
 
+.product-p {
+  margin-bottom: 30px;
+}
+
+.about-sample-img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.law-text {
+  font-style: italic;
+  font-weight: 200;
+  color: #A28C39;
+  font-size: 16px;
+}
+
+.featured-box {
+    padding: 15px;
+    background: #E0B519;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 1px 1px #555;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
 @media (max-width: 1125px) {
   .central-header {
     margin-left: 6%;
@@ -160,6 +217,13 @@ footer {
 @media (max-width: 800px) {
   .container-align {
     float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .row-xs-fix {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
