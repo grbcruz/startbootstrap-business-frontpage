@@ -8,28 +8,284 @@ body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.nav-logo {
+    width: 135px;
+    margin-top: 6px;
+}
+
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+.bg-header {
+  background: url('https://s3.amazonaws.com/faixaourokit/imgs/bg_fx_ouro.jpg') center center scroll;
+  width: 100%;
+  padding-left: 10%;
+}
 
 .business-header {
     height: 400px;
-    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    background: url('https://s3.amazonaws.com/faixaourokit/imgs/Cover3.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
+.business-align {
+  float: left;
+}
+
+.ouro-logo {
+  width: 180px;
+  height: auto;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.central-header {
+  width: 250px;
+  margin-left: 15%;
+  margin-top: 15px;
+  float: left;
+}
+
+.header-impact {
+  width: 250px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  border-style: outset;
+  border-color: #F7D52F;
+}
+
+.font-impact {
+  font-size: 33px;
+  font-weight: 400;
+  color: #E7C51F;
+  text-shadow: 0 0 5px;
+  text-shadow: 1px 0 1px #999;
+  line-height: 1.2;
+}
+
+.sample-img {
+  width: 250px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.about-sample-img {
+  width: 100%;
+}
+
 /* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
-    text-shadow: 0 0 10px #000;
     color: #fff;
+}
+
+.about-tagline {
+    color: #D2B526;
 }
 
 .img-center {
     margin: 0 auto;
 }
 
+.lead-form {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 15px;
+    width: 630px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D0D0D0;
+    color: #fff;
+}
+
+.lead-form .form-col {
+    width: 280px;
+    float: left;
+}
+
+.lead-form .col-mg-right {
+    margin-right: 30px;
+}
+
+.about-lead-form {
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    color: #464646;
+    border-color: #E7C51F;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 8.33333333%;
+}
+
+.help-block {
+  font-weight: 200;
+  font-size: 12px;
+  color: #f0f0f0;
+}
+
+.about-help-block {
+  font-weight: 200;
+  font-size: 12px;
+  color: #c0c0c0;
+}
+
+.form-control:focus { 
+  border-color: #e1c42b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(225, 196, 43, 0.6);
+}
+
+.btn-custom {
+  background: #07B7EC;
+  width: 280px;
+  color: #fff;
+}
+
+.w-icon {
+  width: 15px;
+  height: auto;
+  vertical-align: text-top;
+}
+
 footer {
-    margin: 50px 0;
+  background: url('https://s3.amazonaws.com/faixaourokit/imgs/bg_fx_ouro.jpg') center center scroll;
+  width: 100%;
+  height: 116px;
+}
+
+.logo-footer-container {
+  margin: 15px;
+  float: left;
+}
+
+.logo-footer-container .logo-footer {
+  width: 300px;
+  height: auto;
+}
+
+.product-p {
+  margin-bottom: 30px;
+}
+
+.about-sample-img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.law-text {
+  font-style: italic;
+  font-weight: 200;
+  color: #A28C39;
+  font-size: 16px;
+}
+
+.featured-box {
+    padding: 15px;
+    background: #E0B519;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 1px 1px #555;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 1125px) {
+  .central-header {
+    margin-left: 6%;
+  }
+}
+
+@media (max-width: 950px) {
+  .central-header {
+    margin-left: 37%;
+  }
+  .lead-form {
+    margin-top: 70px;
+    margin-left: 12%;
+    color: #464646;
+    border-color: #E7C51F;
+  }
+  .help-block {
+    color: #c0c0c0;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-align {
+    float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .row-xs-fix {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .lead-form {
+    margin-left: 15px;
+  }
+  .img-max-size {
+    width: 60%;
+  }
+  .logo-footer-container .logo-footer {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .central-header {
+    margin-left: 25%;
+  }
+  .lead-form {
+    margin-top: 30px;
+    width: 92%;
+  }
+  .lead-form .form-col {
+    width: 100%;
+  }
+  .lead-form .col-mg-right {
+    margin-right: 0;
+  }
+  footer {
+    height: 232px;
+  }
+  .logo-footer-container {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 400px) {
+  .central-header {
+    margin-left: 20%;
+  }
+  .lead-form {
+    margin-top: 50px;
+  }
+  .logo-footer-container {
+    margin-left: 15%;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 320px) {
+  .central-header {
+    margin-left: 11%;
+    margin-top: none
+  }
+  .logo-footer-container {
+    margin-left: 7%;
+  }
+  .btn-custom {
+    width: 260px;
+  }
 }
