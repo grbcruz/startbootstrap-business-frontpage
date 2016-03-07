@@ -16,7 +16,7 @@ if(!isset($_POST['name']) OR
 
 echo "Email: ".$_POST['email']; // retirar
 if(!isset($_POST['email']) OR
-  eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", $_POST['email']))
+  !preg_match("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", $_POST['email']))
 {
   phpAlert("Email invalido");
   $error = true;
@@ -29,7 +29,7 @@ if(!isset($_POST['n_kits']) OR ($_POST['n_kits'] <= 0)) {
 
 echo "CEP: ".$_POST['cep']; // retirar
 if(!isset($_POST['cep']) OR
-  eregi("([0-9]{5})+-+([0-9]{3})", $_POST['cep']))
+  !preg_match("([0-9]{5})+-+([0-9]{3})", $_POST['cep']))
 {
   phpAlert("CEP invalido");
   $error = true;
