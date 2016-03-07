@@ -1,6 +1,5 @@
 <?php
 function sendMsg($data) {
-  echo "sendMsg!! "; // retirar
   /* Destinatário */
   $to = $data["email"];
 

@@ -14,9 +14,8 @@ if(!isset($_POST['name']) OR
   $error = true;
 }
 
-echo "Email: ".$_POST['email']; // retirar
 if(!isset($_POST['email']) OR
-  !preg_match("([A-Za-z0-9._%-])+@+([A-Za-z0-9._%-])+\.+([A-Za-z]){2,4}",
+  !preg_match("/([A-Za-z0-9._%-])+@+([A-Za-z0-9._%-])+\.+([A-Za-z]){2,4}/",
     $_POST['email']))
 {
   phpAlert("Email invalido");
@@ -28,9 +27,8 @@ if(!isset($_POST['n_kits']) OR ($_POST['n_kits'] <= 0)) {
   $error = true;
 }
 
-echo "CEP: ".$_POST['cep']; // retirar
 if(!isset($_POST['cep']) OR
-  !preg_match("([0-9]{5})+-+([0-9]{3})", $_POST['cep']))
+  !preg_match("/([0-9]{5})+-+([0-9]{3})/", $_POST['cep']))
 {
   phpAlert("CEP invalido");
   $error = true;
@@ -38,7 +36,7 @@ if(!isset($_POST['cep']) OR
 
 if($error) {
   header("Location: http://faixaourokit.com.br");
-  die();
+  die("123");
 }
 
 $data = array();

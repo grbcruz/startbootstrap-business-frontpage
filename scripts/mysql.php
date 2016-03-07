@@ -18,7 +18,6 @@ function saveUser($user) {
 }
 
 function saveOrder($order) {
-  echo "saveOrder!! "; // retirar
   $db_query = "INSERT INTO Orders VALUES (
     '',
     '".$data["buyer"]."
