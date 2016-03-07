@@ -7,7 +7,7 @@ function sendMsg($data) {
   $subject = "Requisição de orçamento de ".$data["name"];
 
   /* Mensagem */
-  $msg ="
+  $msg = "
     <html>
       <head><title>Requisição de orçamento</title></head> 
       <body>
@@ -26,7 +26,6 @@ function sendMsg($data) {
   $headers = "MIME-Version: 1.0\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\n";
   $headers .= "From: noreply@faixaourokit.com.br\n";
-
   $headers .= "Return-Path: suporte@faixaourokit.com.br\n";
 
   /* Enviando a mensagem */

@@ -35,10 +35,10 @@ if(!isset($_POST['cep']) OR
 }
 
 if($error) {
-  //header("Location: http://faixaourokit.com.br");
+  sleep(3);
+  header("Location: http://faixaourokit.com.br");
   die();
 }
-
 $data = array();
 $data["name"] = $_POST['name'];
 $data["email"] = $_POST['email'];

@@ -1,14 +1,13 @@
 <?php
-include "mysql_conect.inc";
-
+include "mysql_connect.inc";
 function saveUser($user) {
   $db_query = "INSERT INTO Users VALUES (
     '',
-    '".$data["name"]."',
-    '".$data["email"]."',
-    '".$data["phone"]."',
-    '".$data["cep"]."',
-    '".$data["address"]."
+    '".$user["name"]."',
+    '".$user["email"]."',
+    '".$user["phone"]."',
+    '".$user["cep"]."',
+    '".$user["address"]."'
   );";
 
   if(mysql_query($db_query) == true)
@@ -20,11 +19,11 @@ function saveUser($user) {
 function saveOrder($order) {
   $db_query = "INSERT INTO Orders VALUES (
     '',
-    '".$data["buyer"]."
-    '".$data["n_kits"]."',
-    '".$data["al_plates"]."',
-    '".$data["info"]."',
-    '".$data["date"]."',
+    '".$order["buyer"]."',
+    '".$order["n_kits"]."',
+    '".$order["al_plates"]."',
+    '".$order["info"]."',
+    '".$order["date"]."'
   );";
 
   return mysql_query($db_query);
@@ -38,10 +37,10 @@ function saveData($data) {
   $user["cep"] = $data["cep"];
   $user["address"] = $data["address"];
 
-  $order["n_kits"] = $data["kits"];
+  $order["n_kits"] = $data["n_kits"];
   $order["al_plates"] = $data["al_plates"];
   $order["info"] = $data["info"];
-  $order["date"] = date("Y, m, d");
+  $order["date"] = date("Y-m-d");
 
   $res = saveUser($user);
 
