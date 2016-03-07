@@ -47,6 +47,7 @@ function saveData($data) {
     $res = saveOrder($order);
   }
 
+  mysql_close();
   return $res;
 }
 ?>

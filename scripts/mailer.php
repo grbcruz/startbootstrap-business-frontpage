@@ -1,5 +1,4 @@
 <?php
-
 function sendMessage($data) {
   /* Destinatário */
   $to = $data["email"];
