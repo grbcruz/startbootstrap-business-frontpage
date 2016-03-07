@@ -16,7 +16,8 @@ if(!isset($_POST['name']) OR
 
 echo "Email: ".$_POST['email']; // retirar
 if(!isset($_POST['email']) OR
-  !preg_match("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", $_POST['email']))
+  !preg_match("([A-Za-z0-9._%-])+@+([A-Za-z0-9._%-])+\.+([A-Za-z]){2,4}",
+    $_POST['email']))
 {
   phpAlert("Email invalido");
   $error = true;
@@ -35,8 +36,10 @@ if(!isset($_POST['cep']) OR
   $error = true;
 }
 
-if($error)
+if($error) {
+  header("Location: http://faixaourokit.com.br");
   die();
+}
 
 $data = array();
 $data["name"] = $_POST['name'];
