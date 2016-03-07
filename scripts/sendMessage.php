@@ -35,8 +35,8 @@ if(!isset($_POST['cep']) OR
 }
 
 if($error) {
-  header("Location: http://faixaourokit.com.br");
-  die("123");
+  //header("Location: http://faixaourokit.com.br");
+  die();
 }
 
 $data = array();
@@ -63,6 +63,7 @@ if(saveData($data) == false) {
   }
 }
 
+sleep(3);
 header("Location: http://faixaourokit.com.br");
 exit();
 ?>
