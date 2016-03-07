@@ -14,7 +14,7 @@ function sendMessage($data) {
         <p><b>Enviar orçamento para ".$data["name"].":</b></p>
         <p>E-mail: ".$data["email"]."<br>
           Telefone: ".$data["phone"]."<br>
-          Endereço: ".$data["address"]."</p>
+          Endereço: ".$data["address"].". CEP: ".$data["cep"]."</p>
         <p>Informação do pedido:</p>
         <p>Quantidade de kits: ".$data["n_kits"]."<br>
         Quantidade de pares de placas de alumínio: ".$data["al_plates"]."<br>

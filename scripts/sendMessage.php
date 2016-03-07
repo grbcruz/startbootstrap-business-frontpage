@@ -14,19 +14,26 @@ if(!isset($_POST['name']) OR
 }
 
 if(!isset($_POST['email']) OR
-  eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", $email))
+  eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", $_POST['email']))
 {
   phpAlert("Email inválido");
 }
 
-if(!isset($_POST['kits']) OR ($_POST['kits'] <= 0)) {
+if(!isset($_POST['n_kits']) OR ($_POST['n_kits'] <= 0)) {
   phpAlert("A quantidade de kits deve ser maior que zero.");
+}
+
+if(!isset($_POST['cep']) OR
+  eregi("([0-9]{5})+-+([0-9]{3})", $_POST['cep']))
+{
+  phpAlert("CEP inválido");
 }
 
 $data = array();
 $data["name"] = $_POST['name'];
 $data["email"] = $_POST['email'];
 $data["phone"] = $_POST['phone'];
+$data["cep"] = $_POST['cep'];
 $data["address"] = $_POST['address'];
 $data["n_kits"] = $_POST['n_kits'];
 $data["al_plates"] = $_POST['al_plates'];
