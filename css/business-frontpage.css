@@ -21,8 +21,8 @@ body {
 }
 
 .business-header {
-    height: 400px;
-    background: url('https://s3.amazonaws.com/faixaourokit/imgs/Cover3.jpg') center center no-repeat scroll;
+    height: 430px;
+    background: url('https://s3.amazonaws.com/faixaourokit/imgs/Cover4.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
