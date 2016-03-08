@@ -1,7 +1,7 @@
 <?php
 function sendMsg($data) {
   /* Destinatário */
-  $to = $data["email"];
+  $to = "gabriel@faixaourokit.com.br";
 
   /* Assunto */
   $subject = "Requisição de orçamento de ".$data["name"];
