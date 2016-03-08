@@ -258,6 +258,27 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script>
+    var getUrlParameter = function(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? null : sParameterName[1];
+        }
+      }
+
+      return null;
+    };
+
+    var msg = getUrlParameter('msg');
+    if (msg) alert(msg);
+    </script>
 </body>
 
 </html>

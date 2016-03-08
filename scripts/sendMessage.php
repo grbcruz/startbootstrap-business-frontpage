@@ -4,41 +4,39 @@ include "helper.php";
 include "mysql.php";
 include "mailer.php";
 
+$errmsg = null;
+
 /* Recebe e valida valores do formulário */
 if(!isset($_POST['name']) OR
   !isset($_POST['phone']) OR
   !isset($_POST['address']) OR
   !isset($_POST['info']))
 {
-  phpAlert("Por favor, preencha os campos obrigatorios.");
-  $error = true;
+  $errmsg = "Por favor, preencha os campos obrigatorios.";
 }
 
 if(!isset($_POST['email']) OR
   !preg_match("/([A-Za-z0-9._%-])+@+([A-Za-z0-9._%-])+\.+([A-Za-z]){2,4}/",
     $_POST['email']))
 {
-  phpAlert("Email invalido");
-  $error = true;
+  $errmsg = "Email invalido";
 }
 
 if(!isset($_POST['n_kits']) OR ($_POST['n_kits'] <= 0)) {
-  phpAlert("A quantidade de kits deve ser maior que zero.");
-  $error = true;
+  $errmsg = "A quantidade de kits deve ser maior que zero.";
 }
 
 if(!isset($_POST['cep']) OR
   !preg_match("/([0-9]{5})+-+([0-9]{3})/", $_POST['cep']))
 {
-  phpAlert("CEP invalido");
-  $error = true;
+  $errmsg = "CEP invalido";
 }
 
-if($error) {
-  sleep(3);
-  header("Location: http://faixaourokit.com.br");
+if($errmsg != null) {
+  header("Location: http://faixaourokit.com.br/index.php?msg=".$errmsg);
   die();
 }
+
 $data = array();
 $data["name"] = $_POST['name'];
 $data["email"] = $_POST['email'];
@@ -51,19 +49,18 @@ $data["info"] = $_POST['info'];
 
 /* Grava no banco de dados */
 if(saveData($data) == false) {
-  phpAlert("Erro no banco de dados. Por favor, entre em contato
-    pelo email suporte@faixaourokit.com.br");
+  $finalmsg = "Erro no banco de dados. Por favor, entre em contato
+    pelo email suporte@faixaourokit.com.br";
 } else {
   /* Envia a mensagem por email */
   if(sendMsg($data) == false) {
-    phpAlert("Erro no envio da mensagem. Por favor, entre em contato
-      pelo email suporte@faixaourokit.com.br");
+    $finalmsg = "Erro no envio da mensagem. Por favor, entre em contato
+      pelo email suporte@faixaourokit.com.br";
   } else {
-    phpAlert("Formulario enviado com sucesso! Entraremos e contato.");
+    $finalmsg = "Formulario enviado com sucesso! Entraremos e contato.";
   }
 }
 
-sleep(3);
-header("Location: http://faixaourokit.com.br");
+header("Location: http://faixaourokit.com.br?msg=".$finalmsg);
 exit();
 ?>

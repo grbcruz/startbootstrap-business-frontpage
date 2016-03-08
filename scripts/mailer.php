@@ -29,13 +29,6 @@ function sendMsg($data) {
   $headers .= "Return-Path: suporte@faixaourokit.com.br\n";
 
   /* Enviando a mensagem */
-  $res = mail($to, $subject, $msg, $headers);
-
-  if($res == true) {
-    phpAlert("Mensagem enviada com sucesso. Em breve entraremos 
-      em contato. Obrigado!");
-  }
-
-  return $res;
+  return mail($to, $subject, $msg, $headers);
 }
 ?>
